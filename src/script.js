@@ -12,20 +12,17 @@ const canvas = document.querySelector("canvas.webgl");
 // Scene
 const scene = new THREE.Scene();
 
-// Objects - The geometry... the physical shape
-const geometry = new THREE.TorusGeometry(0.7, 0.2, 16, 100);
+// Objects - The geometry... the physical shape... Cubes, Rectangles, Spheres
 
-// Materials - The clothing...
-
+// Materials - The clothing... your skin... lots of different types
 const material = new THREE.MeshBasicMaterial();
 material.color = new THREE.Color(0xff0000);
 
-// Mesh
+// Mesh - Ties both of them together... pass in Geometry and Material... then add to the screen. 4 step process... Geometry -> Skin -> Mesh -> Scene
 const sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 
 // Lights
-
 const pointLight = new THREE.PointLight(0xffffff, 0.1);
 pointLight.position.x = 2;
 pointLight.position.y = 3;
@@ -40,6 +37,7 @@ const sizes = {
   height: window.innerHeight,
 };
 
+// When browser is resized... what happens?
 window.addEventListener("resize", () => {
   // Update sizes
   sizes.width = window.innerWidth;
@@ -57,7 +55,7 @@ window.addEventListener("resize", () => {
 /**
  * Camera
  */
-// Base camera
+// Base camera... several different cameras to choose from
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100);
 camera.position.x = 0;
 camera.position.y = 0;
