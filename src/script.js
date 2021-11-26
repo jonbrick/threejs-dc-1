@@ -7,7 +7,7 @@ import "@fontsource/poppins";
 // Loading - instatiate and create texture loader
 const textureLoader = new THREE.TextureLoader();
 
-const normalTexture = textureLoader.load("/textures/NormalMap.png");
+const normalTexture = textureLoader.load("./textures/NormalMap.png");
 
 // Debug
 const gui = new dat.GUI();
