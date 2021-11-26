@@ -1,6 +1,6 @@
 # See Example here
 
-[src/index.html](src/index.html)
+[dist/index.html](dist/index.html)
 
 # Three.js Starter
 
